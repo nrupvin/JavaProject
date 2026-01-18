@@ -1,0 +1,112 @@
+:root {
+  color-scheme: light;
+  --ink: #1d2330;
+  --accent: #ff6b35;
+  --accent-2: #3a86ff;
+  --paper: #fff7ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 107, 53, 0.25), transparent 55%),
+    radial-gradient(circle at 80% 0%, rgba(58, 134, 255, 0.25), transparent 45%),
+    linear-gradient(135deg, #ffe8d6, #fff7ea 55%, #e8f1ff);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 2px solid rgba(29, 35, 48, 0.08);
+  border-radius: 24px;
+  padding: 40px 48px;
+  max-width: 720px;
+  width: min(90vw, 720px);
+  box-shadow: 0 20px 60px rgba(20, 30, 50, 0.15);
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  background: #fff1db;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Trebuchet MS", "Gill Sans", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+.badge::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.actions a {
+  text-decoration: none;
+  color: var(--ink);
+  font-family: "Trebuchet MS", "Gill Sans", sans-serif;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 2px solid var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.actions a.primary {
+  background: var(--accent-2);
+  color: white;
+  border-color: transparent;
+}
+
+.actions a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(20, 30, 50, 0.15);
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 32px 24px;
+  }
+}

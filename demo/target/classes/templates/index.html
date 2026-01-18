@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vinay's Java Application</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      
+      .container {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        max-width: 600px;
+        width: 100%;
+      }
+      
+      header {
+        background: #4a5f9e;
+        padding: 50px 30px;
+        text-align: center;
+      }
+      
+      header, header p, header span {
+        color: white;
+      }
+      
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        color: #ffffff;
+      }
+      
+      .tagline {
+        font-size: 1.1em;
+        opacity: 0.95;
+        margin-bottom: 20px;
+      }
+      
+      .badge {
+        display: inline-block;
+        background: rgba(0, 0, 0, 0.3);
+        color: white;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        font-weight: bold;
+      }
+      
+      .content {
+        padding: 40px 30px;
+      }
+      
+      .description {
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      
+      .features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+      
+      .feature {
+        background: #f0f4ff;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        border-left: 4px solid #667eea;
+      }
+      
+      .feature strong {
+        color: #667eea;
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      .feature span {
+        font-size: 0.9em;
+        color: #666;
+      }
+      
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      
+      a {
+        padding: 15px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        transition: all 0.3s;
+        display: block;
+      }
+      
+      .primary {
+        background: #4a5f9e;
+        color: white;
+      }
+      
+      .primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+      }
+      
+      .secondary {
+        background: #e3f2fd;
+        color: #0d47a1;
+      }
+      
+      .secondary:hover {
+        background: #bbdefb;
+        transform: translateY(-3px);
+      }
+      
+      .tertiary {
+        background: #f5f5f5;
+        color: #666;
+      }
+      
+      .tertiary:hover {
+        background: #eeeeee;
+        transform: translateY(-3px);
+      }
+      
+      .external {
+        color: #1976d2;
+        font-size: 0.9em;
+      }
+      
+      footer {
+        background: #f5f5f5;
+        padding: 20px 30px;
+        text-align: center;
+        color: #555;
+        font-size: 0.9em;
+      }
+      
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.8em;
+        }
+        
+        .features {
+          grid-template-columns: 1fr;
+        }
+        
+        .actions {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🚀 Welcome!</h1>
+        <p class="tagline">Your Java Spring Boot Application</p>
+        <span class="badge">Spring Boot + Tomcat + Java 17</span>
+      </header>
+      
+      <div class="content">
+        <p class="description">
+          This is a fully functional Spring Boot web application demonstrating modern Java development practices.
+        </p>
+        
+        <div class="features">
+          <div class="feature">
+            <strong>📚 Learning</strong>
+            <span>Complete documentation available</span>
+          </div>
+          <div class="feature">
+            <strong>🔧 Spring Boot</strong>
+            <span>Version 3.3.2</span>
+          </div>
+          <div class="feature">
+            <strong>☕ Java</strong>
+            <span>Version 17</span>
+          </div>
+          <div class="feature">
+            <strong>🌐 Web Server</strong>
+            <span>Apache Tomcat</span>
+          </div>
+        </div>
+        
+        <div class="actions">
+          <a class="primary" href="/help">📖 Learning Center</a>
+          <a class="secondary" href="/api/hello">📡 Test API</a>
+          <a class="tertiary" href="/">🏠 Refresh</a>
+        </div>
+        
+        <p class="description" style="font-size: 0.95em; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+          <strong>🎯 Getting Started:</strong><br>
+          Visit the <strong>Learning Center</strong> to access comprehensive documentation about this project, 
+          how it works, and how to make changes.
+        </p>
+      </div>
+      
+      <footer>
+        ✨ Built with Java 17 and Spring Boot 3.3.2 | 📚 Full documentation included
+      </footer>
+    </div>
+  </body>
+</html>
