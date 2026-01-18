@@ -14,6 +14,6 @@ public class HomeController {
     @GetMapping("/api/hello")
     @ResponseBody
     public String hello() {
-        return "Hello from Spring MVC!";
+        return "Hello, Vinay! Welcome to Java Development!";
     }
 }
