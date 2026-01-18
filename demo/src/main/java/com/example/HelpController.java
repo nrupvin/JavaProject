@@ -41,6 +41,9 @@ public class HelpController {
     public String viewFile(@PathVariable String filename, Model model) {
         model.addAttribute(FILENAME_ATTR, filename);
         
+        // INTENTIONAL DEFECT FOR SONARQUBE TEST
+        String unusedVariable = "This is unused and should trigger a SonarQube warning";
+        
         // Security: Only allow markdown files and prevent path traversal
         if (!filename.endsWith(".md") || filename.contains("..") || filename.contains("/") || filename.contains("\\")) {
             model.addAttribute(ERROR_ATTR, "Error: Only markdown files are allowed");
